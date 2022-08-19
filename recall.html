@@ -11,7 +11,8 @@
     <iframe style="display: none;" src=""></iframe>
     <script>
         const a = document.getElementById('num')
-        const tel = document.location.search.slice(1)
+        // const tel = document.location.search.slice(1)
+        const tel = document.location.search.replace(/\s|-|\(|\)|\+|\?/gi,'')
         a.textContent = '+' + tel
         a.href = 'tel:+' + tel
     </script>
